@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GO GREEN</title>
+    <style>
+        div,img{box-sizing: border-box; /*border: 1px solid red;*/ text-align: center;}
+        /* #content_1>img{
+            position: absolute; top:0; left:0;
+            width: 100%;
+            height: 100%;
+        } */
+        
+        .wrap{
+            width: 1000px;
+            height: 800px;
+            margin: auto;
+        }
+
+        .wrap>div{
+            height: 100%;
+        }
+
+        #header{height: 20%;}
+        #navigator{height: 5%;}
+        #content{height: 65%;}
+        #footer{height: 10%;}
+
+        #header>div, #content>div{
+            height: 100%;
+            float: left;
+        }
+
+        #header_1{
+            width: 20%;
+        }
+        #header_2{width: 65%;}
+        #header_3{width: 15%;}
+
+        #content_1{width: 15%;}
+        #content_2{width: 60%;}
+        #content_3{width: 25%;}
+
+        #right_1{height: 20%;}
+        #right_2{height: 50%;}
+        #right_3{height: 30%;}
+
+        /*네비게이션바*/
+        #navi{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        #navi>li{
+            float: left;
+            /* border: 1px solid blue; */
+            width: 25%;
+            height: 100%;
+            text-align: center;
+        }
+
+        #navi a{
+            /* border: 1px solid rgb(101, 173, 21); */
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: 400;
+            background-color: rgb(101, 173, 21);
+
+            width: 100%;
+            height: 100%;
+
+            display: block; 
+
+            /* vertical-align: middle; 블럭일때는 안됨 */
+            line-height: 35px;
+        }
+
+
+        
+        /*content_2 이미지*/
+
+        #top_Left{
+            width: 50%;
+            float: left;
+            height: 50%;
+        }
+
+        #top_Right{
+            width: 50%;
+            float: right;
+            height: 50%;
+        }
+
+        #bottom_Left{
+            width: 50%;
+            float: left;
+            height: 50%;
+        }
+
+        #bottom_Right{
+            width: 50%;
+            float: right;
+            height: 50%;
+        }
+
+        #content_2 img{
+            width: 90%; height: 90%;
+        }
+
+        /*로그인*/
+        #login_form{width: 100%; height: 100%;}
+        #login_form>*{width: 100%;}
+        #login_form_input{height: 70%;}
+        #login_form_etc{height: 30%; text-align: center;}
+
+        #login_form_input>div{height: 100%; float: left;}
+        #login_input_id_pwd{width: 65%;}
+        #login_input_btn{width: 35%;}
+
+        #login_form_etc>a{
+            text-decoration: none;
+            color: black;
+            font-size: 12px;
+            margin: 10px;
+            vertical-align: middle;
+        }
+        #login_input_id_pwd>input{width: 100%; height: 50%; box-sizing: border-box;}
+        #login_input_btn>input{width: 100%; height: 100%;}
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="header">
+            <div style="padding: 30px;" id="header_1">
+                <img style="width: 100%; height: 100%;" src="image/logo.jpg">
+            </div>
+            <div style="padding: 30px;" id="header_2">
+                <img style="width: 100%; height: 100%;"src="image/mainlogo.jpg">
+            </div>
+            <div id="header_3"></div>
+        </div>
+
+        <div id="navigator">
+            <ul id="navi">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Board</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div style="margin-top: 16px; padding-bottom: 20px;" id="content_1">
+                <img style="width: 100%; height: 100%;" src="image/left_img.jpg">
+            </div>
+            <div id="content_2">
+                <div id="top_Left">
+                    <p>
+                        <img src="image/main_img1.jpg"> <br>
+                        나무를 심는 사람들
+                    </p>
+                </div>
+                <div id="top_Right">
+                    <p>
+                        <img src="image/main_img2.jpg"> <br>
+                        아이들에게 녹색미래를 ..
+                    </p>
+                </div>
+                <div id="bottom_Left">
+                    <p>
+                        <img src="image/main_img3.jpg"> <br>
+                        설악산을 살리는 길
+                    </p>
+                </div>
+                <div id="bottom_Right">
+                    <p>
+                        <img src="image/main_img4.jpg"> <br>
+                        사라지는 북극곰들
+                    </p>
+                </div>
+            </div>
+            <div style="margin-top: 16px; padding-bottom: 20px;" id="content_3">
+                <div id="right_1">
+                    <div id="login_form">
+                        <form action="" id="login_form_input">
+                            <div id="login_input_id_pwd">
+                                <input type="text" name="userId" placeholder="ID를 입력하세요" required>
+                                <input type="password" name="userPwd" placeholder="PW를 입력하세요" required>
+                            </div>
+                            <div id="login_input_btn">
+                                <input type="submit" value="로그인">
+                            </div>
+                        </form>
+                        <div id="login_form_etc">
+                            <a href="#">회원가입</a>
+                            <a href="#">ID/PW 찾기</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="right_2">
+                    <img style="width: 100%; height: 100%;" src="image/right_img.jpg" alt="">
+                </div>
+                <div id="right_3">
+                    <img style="width: 100%; height: 100%;" src="image/me_chat.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div style="margin-bottom: 0px;" id="footer">
+            <p id="footer_1">
+                ⓒExample from JAVA Web Developer Junior
+            </p>
+        </div>
+    </div>
+</body>
+</html>
