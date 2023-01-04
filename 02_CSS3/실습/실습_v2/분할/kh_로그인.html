@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kh_로그인</title>
+    <style>
+        div, form{box-sizing: border-box; /*border: 1px solid red;*/}
+        #content_2{width: 300px;height: 600px;} /*이 스타일은 안가져감*/
+
+        #content_2{margin-top: 10px;}
+        #login_form{width: 100%; height: 30%;}
+        #login_form>*{width: 100%;}
+        #login_form_input{height: 80%;}
+        #login_form_etc{height: 20%; text-align: center; }
+
+        #login_form_input>div{height: 100%; float: left;}
+        #login_input_id_pwd{width: 65%;}
+        #login_input_btn{width: 35%;}
+
+        #login_form_etc>a{
+            text-decoration: none;
+            color: black;
+            font-size: 12px;
+            margin: 10px;
+            vertical-align: middle;
+        }
+        #login_input_id_pwd>input{width: 100%; height: 50%;box-sizing: border-box;}
+        #login_input_btn>input{width: 100%; height: 100%;}
+
+        #add_form>img{width: 100%; height: 100%;}
+    </style>
+</head>
+<body>
+    <div id="content_2">
+        <!-- 로그인폼 전체 감싸는 div -->
+        <div style="border: 1px solid rgb(211,211,211);" id="login_form">
+            <!-- 2_1. 입력받아 요청할 수 있는 form -->
+            <form action="" id="login_form_input">
+                <!-- 3_1. ID/PWD 텍스트 상자가 들어갈 div-->
+                <div id="login_input_id_pwd">
+                    <input type="text" name="userId" placeholder="아이디를 입력하세요" required>
+                    <input type="password" name="userPwd" placeholder="비밀번호를 입력하세요" required>
+                </div>
+
+                <!-- 3_2. 로그인 버튼이 들어갈 div -->
+                <div id="login_input_btn">
+                    <input type="submit" value="로그인">
+                </div>
+            </form>
+
+            <!-- 2_2. 회원가입, ID/PWD 찾기 링크 영역 -->
+            <div id="login_form_etc">
+                <a href="#">아이디</a> |
+                <a href="#">비밀번호찾기</a> |
+                <a href="#">회원가입</a>
+            </div>
+        </div>
+
+        <!--밑에 광고-->
+        <div style="border: 1px solid rgb(211,211,211); margin-top: 10px;" id="add_form">
+            <img src="image/shopping.PNG">
+        </div>
+    </div>
+</body>
+</html>
