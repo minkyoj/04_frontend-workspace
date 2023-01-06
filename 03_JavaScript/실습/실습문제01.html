@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제1</title>
+</head>
+<body>
+    <h1>행 열 각각 입력받아 테이블 만들기</h1>
+
+    <h4>힌트 : 반복문은 자바랑 같습니다. 다만! 변수만 var 데이터형 이라는걸 기억해주세요</h4>
+    
+    <button onclick="createTable();">테이블 생성</button>
+
+    
+    <div id="table_div">
+    </div>   
+    
+    <script>
+        function createTable() {
+            var row = prompt("몇 행을 추가하시겠습니까?");
+            var col = prompt("몇 열을 추가하시겠습니까?");
+            
+            var a = "<table border='1'>";
+
+            for(var i=0; i<row ;i++){
+                a += "<tr>"
+                for(var j=0; j<col ;j++){
+                    a += "<td height = '50px' width = '30px'></td>"
+                }
+                a += "</tr>"
+            }
+            a += "</table>";
+            
+            var divEl = document.getElementById("table_div");
+
+            divEl.innerHTML = a;
+
+        }
+        
+    </script>
+
+    <h1>행 열을 각각 입력 받아서 새화면에서 출력하기</h1>
+    <button onclick="createTable2();">ㅇㅇ</button>
+
+    <script>
+        function createTable2() {
+            var row = prompt("몇 행을 추가하시겠습니까?");
+            var col = prompt("몇 열을 추가하시겠습니까?");
+            
+            var count = 1;
+            var a = "<table border='1'>";
+
+            for(var i=0; i<row ;i++){
+                a += "<tr>"
+                for(var j=0; j<col ;j++){
+                    a += "<td height = '50px' width = '30px'>"+count+"</td>";
+                    count++;
+                }
+                a += "</tr>"
+            }
+            a += "</table>";
+
+            document.write(a);
+        }
+    </script>
+
+
+</body>
+</html>

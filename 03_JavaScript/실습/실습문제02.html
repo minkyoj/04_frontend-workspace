@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제2</title>
+    <style>
+        .box{
+            border: 1 solid black;
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>1.색상 선택 후 변경 버튼을 클릭하면 색상이 변경되도록 만들어 보시오</h1>
+    
+    <div id="changeColor" class="box" style="background-color: black;"></div>
+    
+    <input type="color" id="selectColor">
+    <button onclick="changeColor();">변경</button>
+
+    <script>
+        function changeColor() {
+            var cc = document.getElementById("changeColor");
+            var sc = document.getElementById("selectColor");
+
+            // console.log(sc.value);
+            
+            cc.style.backgroundColor = sc.value;
+            
+        }
+
+    </script>
+
+    <hr>
+    <h1>2. 버튼에 따라 크기 조절이 가능하게 만들기</h1>
+
+    <div id="changeSize" class="box" style="background-color: black;"></div>
+    
+    <button onclick="selectSize1()">50x50</button>
+    <button onclick="selectSize2()">원본(100x100)</button>
+    <button onclick="selectSize3()">200x200</button>
+
+    <script>
+        var cs = document.getElementById("changeSize");
+
+        function selectSize1() {
+            cs.style.width = "50px";
+            cs.style.height = "50px";
+        }
+
+        function selectSize2() {
+            cs.style.width = "100px";
+            cs.style.height = "100px";
+        }
+
+        function selectSize3() {
+            cs.style.width = "200px";
+            cs.style.height = "200px";
+        }
+    </script>
+
+    
+
+</body>
+</html>
