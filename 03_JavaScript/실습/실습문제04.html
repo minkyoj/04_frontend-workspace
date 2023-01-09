@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본문법</title>
+    <style>
+    .area, .area2 {
+        width: 930px;
+        height: 250px;
+        border: 1px solid red;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>기본 문법 문제</h1>
+    문제1. 다음 보기에 있는 텍스트 필드에 작성한 문자열의 길이를 알아올 수 있도록 구현하시오
+    <fieldset>
+        <legend>보기</legend>
+        <input type="text" id="textInput">
+    </fieldset>
+    <br>
+    <div class="area"></div>
+    <button onclick="checkLength();">확인하기</button>
+
+    <script>
+        function checkLength() {
+            let str = document.querySelector("#textInput");
+            let area = document.querySelector(".area");
+            
+            area.innerHTML = "보기의 문자열 길이는 " + (str.value.length) + "글자 입니다."
+        }
+    </script>
+
+    <br>
+
+    문제2. 다음 보기에 있는 문자열을 ,(콤마)를 기준으로 잘라내어 하나하나 출력하시오
+    <fieldset>
+        <legend>보기</legend>
+        콜라,사이다,햄버거,피자,한약
+    </fieldset>
+    <br>
+    <div class="area2"></div>
+    <button onclick="checkList();">확인하기</button>
+
+
+    <script>
+        function checkList() {
+            let list = "콜라,사이다,햄버거,피자,한약";
+            let food = list.split(",");
+            
+            document.querySelector(".area2").innerHTML = "1. " + food[0] + "<br>"
+                                                       + "2. " + food[1] + "<br>"
+                                                       + "3. " + food[2] + "<br>"
+                                                       + "4. " + food[3] + "<br>"
+                                                       + "5. " + food[4] + "<br>"
+
+        }
+
+
+        
+    </script>
+    
+    
+</body>
+</html>
