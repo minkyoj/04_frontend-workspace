@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .area{
+            border: 1px solid black;
+            width: 500px;
+            height: 100px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>함수 (function)</h1>
+    <h3 onclick="test1();">* 선언적 함수</h3> <!-- 우리가 그동안 만든거 -->
+    <pre>
+        function 함수명([매개변수, 매개변수, ..]) {
+            해당 함수 호출시 실행할 소스코드;
+
+            [return 결과값;]
+        }
+    </pre>
+
+    <button onclick="test1();">실행확인</button>
+    <div id="area1" class="area"></div>
+
+    <script>
+        function test1() {
+            document.getElementById("area1").innerHTML += "test1() 함수 실행됨 <br>";
+
+        }
+    </script>
+
+    <br>
+
+    <h3>* 익명함수(이름이 없는 함수)</h3>
+    <pre>
+    변수|속성 = function 함수명([매개변수, 매개변수, ..]) {
+        해당 함수 호출시 실행할 소스코드;
+
+        [return 결과값;]
+    }
+
+    특정 변수나 속성에 대입되는 함수 제시시 주로 사용됨
+    (주로 이벤트 핸들러(이벤트 발생시 실행할 함수) 작성시 사용)
+    </pre>
+
+    <button id="btn">실행확인</button>
+    <div id="area2" class="area"></div>
+
+    <script>
+        const btn = document.getElementById("btn"); // button 요소객체
+        btn.onclick = function() { // 이름이 없어서 직접 호출 불가
+            document.getElementById("area2").innerHTML += "이벤트 핸들러를 통해 실행됨 <br>";
+        }
+    </script>
+
+    <hr>
+    
+    <h2>함수의 매개변수</h2>
+
+    <button>실행확인</button>
+    <button>실행확인</button>
+    <button>실행확인</button>
+    <button>실행확인</button>
+
+    <br>
+    <div id="area3" class="area"></div>
+
+    <button>실행확인</button>
+    <button>실행확인</button>
+    <button>실행확인</button>
+    <button>실행확인</button>
+
+
+
+</body>
+</html>
