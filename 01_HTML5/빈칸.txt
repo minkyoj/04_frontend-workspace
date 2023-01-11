@@ -1,4 +1,5 @@
 1. css 파일 => 외부스타일 연결방법
+<link rel="stylesheet" href="경로">
 
 2. html head body의 역할
 
