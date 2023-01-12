@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>배열 실습 문제2</h1>
+    <p>
+        다음 보기에 있는 문자열을 가지고 정답과 같이 만드세요. (별도의 문자열을 쓰면 안됨)
+        그리고 출력 부분에 출력하도록 하면 됩니다. 정답 : "brlove"
+        <fieldset>
+            <legend>보기</legend>
+            <label id="stringla1">r b</label><br>
+            <label id="stringla2">e v o l</label><br>
+        </fieldset>
+    </p>
+
+    <p style="border: 1px solid red" id="result">이 부분에 정답 출력 될 수 있도록 하세요</p>
+    <button onclick="reverse();">처리</button>
+
+    <script>
+        function reverse() {
+            const row1 = document.getElementById('stringla1').innerText.split(" ");
+            const row2 = document.getElementById('stringla2').innerText.split(" ");
+            const result = document.getElementById("result");
+
+            console.log(row1);
+            console.log(row2);
+
+            const reverseR1 = row1.reverse();
+            const reverseR2 = row2.reverse();
+
+            for(let i in reverseR1) {
+                
+                if(i>0){
+                    result.innerHTML += reverseR1[i];
+                }else {
+                    result.innerHTML = reverseR1[i];
+                }
+            };
+            for(let i in reverseR2) {
+                result.innerHTML += reverseR2[i];
+            };
+            
+        }
+    </script>
+    
+</body>
+</html>
