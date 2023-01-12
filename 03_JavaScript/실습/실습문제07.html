@@ -27,22 +27,18 @@
             const row2 = document.getElementById('stringla2').innerText.split(" ");
             const result = document.getElementById("result");
 
-            console.log(row1);
-            console.log(row2);
+            row1.reverse();
+            row2.reverse();
 
-            const reverseR1 = row1.reverse();
-            const reverseR2 = row2.reverse();
-
-            for(let i in reverseR1) {
-                
+            for(let i in row1) {
                 if(i>0){
-                    result.innerHTML += reverseR1[i];
+                    result.innerHTML += row1[i];
                 }else {
-                    result.innerHTML = reverseR1[i];
+                    result.innerHTML = row1[i];
                 }
             };
-            for(let i in reverseR2) {
-                result.innerHTML += reverseR2[i];
+            for(let i in row2) {
+                result.innerHTML += row2[i];
             };
             
         }

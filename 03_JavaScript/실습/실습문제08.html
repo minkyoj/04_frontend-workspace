@@ -25,14 +25,13 @@
     <script>
         const result = document.getElementById("result");
         const arr = [];
-        const sInput = document.getElementById("sInput");
 
         function strInput() {
-            arr.push(sInput.value);
+            arr.push(document.getElementById("search").value);
         }
 
         function strOutput() {
-            
+            result.innerHTML = arr;
         }
     </script>
 

@@ -30,14 +30,15 @@
 
     <script>
         function arraySelect() {
-            const arr = ["사과","바나나","당근","김밥","치즈","떡볶이","햄버거","환타","사이다","콜라","고양이","강아지"];
+            const arr1 = document.getElementById('la1').innerText.split(",");
+            const arr2 = document.getElementById('la2').innerText.split(",");
+            const arr3 = document.getElementById('la3').innerText.split(",");
+            const arr4 = document.getElementById('la4').innerText.split(",");
+            const arr = arr1.concat(arr2,arr3,arr4);
+            
             const sel = document.getElementById("search").value;
 
-            console.log(sel);
-
             const index = arr.indexOf(sel);
-
-            console.log(arr);
 
             if(index == -1) {
                 notExist();
@@ -51,9 +52,6 @@
             function exist() {
                 window.alert(sel+"은(는) 배열 index"+index+"번째에 존재합니다.");
             }
-
-
-            // window.alert();
 
         }
     </script>
