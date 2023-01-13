@@ -26,7 +26,7 @@
         <label id="la4">고양이,강아지</label><br>
     </fieldset>
     <input type="text" id="search" placeholder="찾을 문자열을 입력하세요">
-    <button onclick="arraySelect();">전송 및 처리</button>
+    <button onclick="test();">전송 및 처리</button>
 
     <script>
         function arraySelect() {
@@ -36,21 +36,34 @@
             const arr4 = document.getElementById('la4').innerText.split(",");
             const arr = arr1.concat(arr2,arr3,arr4);
             
-            const sel = document.getElementById("search").value;
+            const search = document.getElementById("search").value;
 
-            const index = arr.indexOf(sel);
+            const index = arr.indexOf(search);
 
             if(index == -1) {
-                notExist();
+                alert(search+"은(는) 존재하지 않습니다.");
             }else {
-                exist();
+                alert(search+"은(는) 배열 index"+index+"번째에 존재합니다.");
             }
+        }
+        // 풀이
+        function test(){
+            let str = "";
+            for(let i=1; i<=4; i++){
+                str += document.getElementById("la"+i).innerHTML;
+                str += ",";
+            }
+            const foods = str.split(",");
 
-            function notExist() {
-                window.alert(sel+"은(는) 존재하지 않습니다.");
-            }
-            function exist() {
-                window.alert(sel+"은(는) 배열 index"+index+"번째에 존재합니다.");
+            foods.pop();
+            
+            const search = document.getElementById("search");
+            let index = foods.indexOf(search.value); // 요소있으면 index값 뱉음 없으면 -1 뱉음
+
+            if(index == -1){
+                alert("존재하지 않습니다."); // 없다
+            }else {
+                alert(search.value + "는 배열 index " + index + "번째에 존재합니다.");
             }
 
         }
