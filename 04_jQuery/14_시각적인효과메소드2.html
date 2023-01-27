@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="resources/js/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+    <h3>* fadeIn()과 fadeOut(), fadeToggle()</h3>
+
+    <p style="background-color: red; opacity: 0.5;">선택된 요소가 점점 투명해지면서 사라지고 점점 선명해지면서 보여지게 해주는 메소드</p>
+    
+    <button onclick="test1();">숨기기</button>
+    <button onclick="test2();">보여주기</button>
+    <button onclick="test3();">토글</button>
+
+    <br><br>
+
+    <img id="rice" src="https://file.namu.moe/file/c2790d5985eae82cd1199a4cba2101c17a1f0bb8a9cf7f48a2d3acf6dae9d3411fc445da31c1027ff5395795c3aada2f" alt="">
+
+    <script>
+        function test1(){
+            $("#rice").fadeOut(2000);
+        }
+
+        function test2(){
+            $("#rice").fadeIn(2000);
+        }
+
+        function test3(){
+            $("#rice").fadeToggle(2000);
+        }
+    </script>
+
+
+</body>
+</html>

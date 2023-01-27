@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="resources/js/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+    <h1>시각적인 효과 (Effect)</h1>
+    <p>페이지 내에 애니메이션 효과를 주기 위해 사용되는 메소드 집합</p>
+
+    <h3>* show()와 hide(), toggle()</h3>
+    <p>선택된 요소가 점점 커지면서 보여지고, 점점 작아지면서 사라지게 하는 메소드</p>
+
+    <button id="hide">숨기기</button>
+    <button id="show">보여주기</button>
+    <button id="toggle">토글</button>
+
+    <br><br>
+
+    <!-- <img src="../02_CSS3/resources/image/city1.PNG" alt=""> -->
+    <img id="jg" src="https://postfiles.pstatic.net/MjAyMjEwMjdfMjYx/MDAxNjY2ODUwMzYzMTQz.ZMYbgXsQ5Zu-W6x3Ac4bEswIf-tIeHykbr66Kh-CrUkg.gm5LQhQS8NAXJkRzdLTO_Cvwb_9Ly9n3Na6KKqwX3ksg.JPEG.hj_utge/IMG_4482.jpg?type=w773" data-lazy-src="" data-width="693" data-height="394" alt="" class="se-image-resource egjs-visible">
+
+    <br>
+
+    <div id="area" style="width: 100px; height: 100px; background-Color: red";></div>
+
+    <script>
+        $(function(){
+            $("#hide").click(function(){
+                // $("#jg").hide();
+                $("#jg").hide(1500);
+                $("#area").hide(1500);
+            })
+
+            $("#show").click(function(){
+                // $("#jg").show();
+                $("#jg").show(1500);
+            })
+
+            $("#toggle").click(function(){
+                $("#jg").toggle(2000);
+            })
+        })
+    </script>
+
+
+</body>
+</html>
