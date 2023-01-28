@@ -8,42 +8,74 @@
 </head>
 <body>
     <form action="test.do">
-    <fieldset style="width: 350px;">
+    <fieldset style="width: 370px;">
         <legend>회원 가입 양식</legend>
         <table>
             <tr>
-                <td>아이디</td>
-                <td><input type="text"></td>
-                <td><button>중복확인</button></td>
+                <td><label for="userId">아이디</label></td>
+                <td><input type="text" name="userId" id="userId"></td>
+                <td><input type="button" value="중복확인" onclick="return validate();"></td>
             </tr>
             <tr>
-                <td>비밀번호</td>
-                <td><input type="text"></td>
+                <td><label for="userPwd1">비밀번호</label></td>
+                <td><input type="password" name="userPwd1" id="userPwd1"></td>
                 <td></td>
             </tr>
             <tr>
-                <td>비밀번호확인</td>
-                <td><input type="text"></td>
+                <td><label for="userPwd2">비밀번호확인</label></td>
+                <td><input type="password" name="userPwd2" id="userPwd2"></td>
                 <td></td>
             </tr>
             <tr>
                 <td>지역</td>
                 <td>
-                    서울<input type="radio">
-                    부산<input type="radio">
-                    대구<input type="radio">
+                    <label for="seoul">서울</label>
+                    <input type="radio" id="seoul" value="seoul" name="location">
+                    <label for="busan">부산</label>
+                    <input type="radio" id="busan" value="busan" name="location">
+                    <label for="daegu">대구</label>
+                    <input type="radio" id="daegu" value="daegu" name="location">
                 </td>
                 <td></td>
             </tr>
             <tr>
-                <td colspan="3">
+                <td style="text-align: center;" colspan="3">
                     <input type="reset">
-                    <input type="submit" value="회원가입">
+                    <input type="submit" value="회원가입" onclick="return validate();">
                 </td>
             </tr>
         </table>
     </fieldset>
     </form>
+
+    <script>
+        function validate() {
+            const idInput = document.getElementById("userId");
+            const pwdInput1 = document.getElementById("userPwd1");
+            const pwdInput2 = document.getElementById("userPwd2");
+            const location = document.getElementsByName("location");
+
+            let regExp = /^[a-z][a-z\d!@#]{5,11}/
+
+            if(!regExp.test(idInput.value)){
+                idInput.style.backgroundColor="red";
+                idInput.select();
+                return false;
+            } else {
+                idInput.style.backgroundColor="green";
+                return true;
+            }
+
+            if(location[0].value = null){
+                alert("지역을 선택해주세요");
+            }else {
+                return true;
+            }
+
+
+
+        }
+    </script>
 
 
 </body>
