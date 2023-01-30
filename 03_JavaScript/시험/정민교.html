@@ -30,11 +30,11 @@
                 <td>지역</td>
                 <td>
                     <label for="seoul">서울</label>
-                    <input type="radio" id="seoul" value="seoul" name="location">
+                    <input type="radio" name="location" id="seoul" value="seoul">
                     <label for="busan">부산</label>
-                    <input type="radio" id="busan" value="busan" name="location">
+                    <input type="radio" name="location" id="busan" value="busan">
                     <label for="daegu">대구</label>
-                    <input type="radio" id="daegu" value="daegu" name="location">
+                    <input type="radio" name="location" id="daegu" value="daegu">
                 </td>
                 <td></td>
             </tr>
@@ -47,7 +47,7 @@
         </table>
     </fieldset>
     </form>
-
+    
     <script>
         function idCheck() {
             const idInput = document.getElementById("userId");
@@ -56,9 +56,8 @@
 
             if(!regExp.test(idInput.value)){
                 idInput.style.backgroundColor="red";
-                idInput.select();
-                return true;
-            } else {
+                return false;
+            }else {
                 idInput.style.backgroundColor="green";
                 return true;
             }
@@ -68,15 +67,22 @@
         function validate() {
             const location = document.getElementsByName("location");
 
-            console.log(location);
+            let count = 0;
 
-            // if(location[0].value = null){
-            //     alert("지역을 선택해주세요");
-            // }else {
-            //     return true;
-            // }
+            for(let i=0 ; i<location.length ; i++){
+                if(location[i].checked){
+                    count++;
+                }
+            }
 
-        }
+            if(count > 0){
+                return true;
+            }else {
+                alert("지역을 선택해주세요");
+                return false;
+            }
+            }
+
     </script>
 
 

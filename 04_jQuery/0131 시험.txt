@@ -1,0 +1,16 @@
+1. jQuery 연동 방법 => 폴더를 복잡하게 구성해서 나오지 않을까... <script src>
+2. input type 속성
+3. div태그, span태그의 차이점
+- 블럭요소냐 인라인요소냐
+4. infinity, NaN, eval(인자) 이런것들..? 윈도우 전역객체 속성
+5. typeof() 이게 뭐냐??
+6. document 메소드들.. getElementId, getElementsClassName
+** 클래스 속성이 abc를 갖는 값을 변수 abc에 할당해라
+const abc = document.getElementsClassName("abc");
+7. window.onload(); 이게 뭔지 특징
+8. 자바스크립트를 작성하는 방법 3가지 - 내부 외부 인라인
+9. 자바스크립트에서 배열 선언하는 방법 - 2가지
+let arr = []; let arr = new Array(); - 크기지정 할 수도 안할 수도
+10. block scope, function scope 이게 뭐냐.. => {} 뭐가다르냐..
+11. undefined가 언제 뜨는지? => 값을 할당받지 못한 상태일 때 
+12. 원시타입, 참조타입 차이점, 종류
