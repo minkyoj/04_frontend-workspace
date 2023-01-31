@@ -40,7 +40,7 @@
             </tr>
             <tr>
                 <td style="text-align: center;" colspan="3">
-                    <input type="reset">
+                    <input type="reset" onclick="return colorRemove();">
                     <input type="submit" value="회원가입" onclick="return validate();">
                 </td>
             </tr>
@@ -52,7 +52,7 @@
         function idCheck() {
             const idInput = document.getElementById("userId");
 
-            let regExp = /^[a-z][a-z\d!@#]{5,11}/
+            let regExp = /^[a-z][a-z\d!@#]{5,11}$/
 
             if(!regExp.test(idInput.value)){
                 idInput.style.backgroundColor="red";
@@ -61,8 +61,7 @@
                 idInput.style.backgroundColor="green";
                 return true;
             }
-
-        }
+            }
 
         function validate() {
             const location = document.getElementsByName("location");
@@ -82,9 +81,12 @@
                 return false;
             }
             }
+        
+        function colorRemove() {
+            const idInput = document.getElementById("userId");
 
+            idInput.style.backgroundColor="white";
+            }
     </script>
-
-
 </body>
 </html>
