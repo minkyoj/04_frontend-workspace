@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    카트승률계산기<br>
+    승: <input type="text" name="" id="win"> <br>
+    패: <input type="text" name="" id="lose"> <br>
+    <button onclick="check()">계산</button><br>
+    
+    <div id="result"></div>
+
+    <script>
+        function check() {
+            const rs = document.getElementById("result");
+            const win = document.getElementById("win").value;
+            const lose = document.getElementById("lose").value;
+            
+            rNumber = (win)/(Number(win)+Number(lose));
+            rNString = rNumber.toFixed(2);
+            
+            let result = rNString.substr(2,2);
+
+            rs.innerHTML = "승률:" + result + "%";
+            
+
+        }
+    </script>
+    
+</body>
+</html>

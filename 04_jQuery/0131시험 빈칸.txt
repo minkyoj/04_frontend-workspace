@@ -1,0 +1,48 @@
+1. jQuery 연동 방법
+
+
+2. input type 속성
+
+
+3. div태그, span태그의 차이점
+
+
+4. infinity, NaN, eval(인자) 이런것들..? 윈도우 전역객체 속성
+- Infinity
+
+- NaN *
+
+- eval(인자)
+
+
+5. typeof() 이게 뭐냐??
+
+
+6. document 메소드들.. getElementById, getElementsClassName
+** 클래스 속성이 abc를 갖는 값을 변수 abc에 할당해라
+
+
+7. window.onload(); 이게 뭔지 특징
+
+
+8. 자바스크립트를 작성하는 방법 3가지
+
+
+9. 자바스크립트에서 배열 선언하는 방법 - 2가지
+
+
+
+10. block scope, function scope 이게 뭐냐.. 
+
+
+11. undefined가 언제 뜨는지?
+
+
+12. 원시타입, 참조타입 차이점, 종류
+* 원시타입
+- 종류 : 
+- 특징 : 
+
+* 참조타입
+- 종류 : 
+- 특징 : 
