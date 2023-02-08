@@ -3,35 +3,6 @@
 
 2. input type 속성
     type=”XXXX”
-    text : 한 줄짜리 텍스트를 입력할 수 있는 텍스트상자 (기본값)
-    password : 비밀번호를 입력할 수 있는 텍스트상자 (입력값 보이지 않음)
-    search : 검색을 위한 텍스트상자, 값 입력 시 초기화를 위한 X버튼 나온다
-    url : 홈페이지 주소를 위한 텍스트상자, 올바른 주소 양식이 아니면 제출되지 않는다.
-    email : 이메일을 위한 텍스트상자 , @가 없는 등 올바른 이메일 양식이 아니면 제출되지 않는다
-    phone : 전화번호를 위한 텍스트상자, 모바일로 입력하려고 하면 숫자키패드가 열린다.
-    textarea : 여러 줄 입력이 가능한 텍스트 상자, 스타일 영역에서 resize를 none으로 하면 마우스로 크기 조절이 불가능하다
-    number : 숫자 값만 작성 가능한 텍스트상자, 스핀박스가 표시된다.
-    range : 슬라이드바를 통해 숫자 지정이 가능하다.
-    date : 연도, 월, 일을 입력받을 수 있는 텍스트상자
-    month : 연도, 월까지만 입력받을 수 있는 텍스트상자
-    week : 연도, 해당 연도의 몇 번째 주인지 입력받을 수 있는 텍스트 상자
-    time : 오전|오후, 시, 분을 입력받을 수 있는 텍스트상자
-    datetime-local : 연도, 월, 일, 오전|오후, 시, 분 입력받을 수 있는 텍스트상자
-    submit : <form>태그 내 입력된 데이터를 서버로 전달해주는 버튼 생성
-    reset : <form>태그 내 입력된 데이터들을 초기화 시켜주는 버튼 생성
-    button : 일반버튼 생성
-    radio :
-        제시한 여러 개의 값들 중에서 오로지 한 개만 선택해야 될 때
-        name 속성 값이 똑같은 것 들 끼리 하나의 그룹으로 지어짐
-        제출 시 현재 선택된 (checked) 라디오 버튼의 value 값이 넘어감
-        해당 라디오버튼 선택 시 어떤 값을 넘길지 value값 명시해줘야 한다.
-    checkbox :
-        제시한 여러 개의 값들 중에서 여러 개 선택 가능할 경우
-        제출 시 현재 선택된(checked) 체크박스의 value값 넘어감
-        동일한 키 값으로 여러 value값이 넘어온 경우에는 스트링 배열에 담긴다.
-    color : 색상을 선택할 수 있는 input
-    file : 첨부하고자 하는 파일을 선택할 수 있는 input
-    hidden : 사용자에게 입력받지 않고, 화면에 노출시키지도 않고 넘겨야 하는 특정 값이 존재할 경우
 
 3. div태그, span태그의 차이점
 - div는 블럭요소 / span은 인라인요소
@@ -39,10 +10,6 @@
     div태그와 span태그의 차이점 1 : 줄바꿈 적용
     > div태그 : 블럭요소로 한 줄 단위로 영역 차지(이미 존재하는 태그 다음줄에 영역이 잡힘)
     > span태그 : 인라인요소로 content 영역만 차지(줄바꿈이 발생되지 않고 옆으로 영역이 잡힘)
-
-    div태그와 span태그의 차이점 2 : 영역 지정 방식
-    > div태그 : 사각형 박스로 영역을 지정
-    > span태그 : 문장 단위로 영역을 지정
 
 4. infinity, NaN, eval(인자) 이런것들..? 윈도우 전역객체 속성
 - Infinity
@@ -63,7 +30,8 @@
 const abc = document.getElementsClassName("abc");
 
 7. window.onload(); 이게 뭔지 특징
-window.onload= = function(){
+해당 문서 요소들을 다 로드시키는 window 전역객체
+window.onload = function(){
                     실행내용;
                 }
 				JavaScript 에서의 window.onload 구문은
@@ -85,7 +53,7 @@ let arr = [];
 let arr = new Array();- 크기지정 할 수도 안할 수도
 
 10. block scope, function scope 이게 뭐냐.. => {} 뭐가다르냐..
-	var는 function[al] scope == 변수가 선언된 함수 영역 내에서 사용 가능
+	var는 function scope == 변수가 선언된 함수 영역 내에서 사용 가능
 	let, const는 block scope == 변수가 선언된 "블력{}" 내에서만 사용 가능 (자바와 유사)
 
 11. undefined가 언제 뜨는지?
